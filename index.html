@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Youth Forum</title>
+  <!-- daisy ui link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://kit.fontawesome.com/355d7f7ac4.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header>
+    <!-- navbar -->
+    <section class="container mx-auto lg:px-24 px-8 py-10">
+      <div class="flex flex-col lg:flex-row  justify-between gap-6 ">
+        <div class="">
+          <h1 class="text-6xl lg:text-4xl font-bold">ReTro</h1>
+        </div>
+        <div class=" flex gap-4 lg:gap-6">
+
+          <img title="Home" src="images/home.svg" alt="">
+          <img title="edit" src="images/edit.svg" alt="">
+          <img title="add" src="images/contact.svg" alt="">
+          <img title="flag" src="images/flag.svg" alt="">
+          <button class="btn btn-primary rounded-full px-10 ">Sign in</button>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- banner section -->
+    <section class="container mx-auto lg:px-24 px-8 ">
+      <div
+        class="lg:h-96 bg-[url(images/bgbanner.png)] bg-no-repeat  bg-[#12132D] flex flex-col lg:flex-row  justify-between items-center bg-cover rounded-2xl p-8 lg:p-14 gap-6">
+        <!-- <div class="bg-[url(images/bgbanner.png)]">-->
+        <div class="space-y-4 lg:space-y-10">
+          <h1 class="text-4xl lg:text-6xl font-extrabold text-white">Welcome to the <br> <span
+              class="text-[#797DFC]">ReTro</span> Forum</h1>
+          <p class="text-white">Share your favorite opinion and win and wp forum coffee mug!</p>
+          <div class="space-y-4">
+            <input type="text" placeholder="Search here anything " class="p-3 lg:p-6 w-96 rounded-full">
+            <button class="btn btn-primary lg:-translate-x-36 rounded-full w-96 lg:w-32">Search</button>
+          </div>
+
+        </div>
+        <div class="border-purple-700 rounded-2xl bg-white h-72 p-8 w-96 space-y-8">
+          <div class="flex justify-between items-center">
+            <p>Registered Users</p>
+            <p>01</p>
+          </div>
+          <div class="flex justify-between">
+            <p>Forum</p>
+            <p>01</p>
+          </div>
+          <div class="flex justify-between">
+            <p>Topics</p>
+            <p>01</p>
+          </div>
+          <div class="flex justify-between">
+            <p>Replies</p>
+            <p>01</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+  <!-- main section -->
+  <main>
+    <!-- let's discuss section -->
+    <section class="container mx-auto lg:px-24 px-8 mt-10">
+      <h1 class="text-6xl font-bold text-center">Let’s Discuss</h1>
+      <p class="text-center p-6">Yes, you can run unit tests and view the results directly within the app. The <br>
+        integrated testing features allow for a streamlined .</p>
+      <!-- overall div for card info -->
+
+
+      <div class="flex justify-between gap-10">
+        <div id="discuss-container" class="w-full">
+
+        </div>
+
+        <div class=" w-full lg:w-[65%] px-10 bg-[#797DFC1A] rounded-3xl">
+          <div>
+            <div class="flex items-center justify-between my-8 ">
+              <div class="font-mulish my-3 text-left font-bold text-xl">Title</div>
+
+              <div><i class="fa-solid fa-check-double text-green-700"></i>
+                Mark as read: <span id="read-count"></span>
+
+              </div>
+            </div>
+            <hr class="border-2  w-full border-gray-600 my-3">
+
+            <div id="mark-post">
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <!-- join our forum section -->
+    <section class="container mx-auto lg:px-24 px-8 mt-10">
+      <div class="hero lg:h-96 bg-[#12132D] rounded-2xl">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img src="images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
+          <div class="text-center lg:text-left">
+            <h1 class="text-5xl text-white font-bold">Join Our Forum</h1>
+            <p class="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+              exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <button class="btn btn-primary w-36 rounded-full">Registered Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- letest post section -->
+
+    <section class="container mx-auto lg:px-24 px-8 mt-10">
+      <h1 class="text-6xl font-bold text-center">Latest Posts</h1>
+      <p class="text-center p-6">Yes, you can run unit tests and view the results directly within the app. The <br>
+        integrated testing features allow for a streamlined .</p>
+
+
+      <div id="latest-post-container" class="grid grid-cols-1 lg:grid-cols-3 gap-5"></div>
+
+
+    </section>
+  </main>
+  <!-- footer section -->
+
+
+  <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10">
+    <div>
+      <h1 class="text-6xl font-extrabold">Youth</h1>
+      <p>The OYF is an annual International forum that takes place in the City of Dhaka,Banglades</p>
+    </div>
+    <nav>
+      <div class="grid grid-flow-col gap-4">
+        <img src="images/logo-twitter 2.svg" alt="">
+        <img src="images/facebook (2).svg" alt="">
+        <img src="images/instagram.svg" alt="">
+        <img src="images/github.svg" alt="">
+
+      </div>
+
+    </nav>
+    <hr class="border-gray-500 border-[1px] my-5 lg:my-10 w-3/4 mx-auto border-dashed">
+    <aside>
+      <p class="">2024, All Rights Reserved.</p>
+    </aside>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
