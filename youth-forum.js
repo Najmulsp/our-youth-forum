@@ -40,7 +40,7 @@ const displayInfo = (info) =>{
                     </div>
                 </div>
               <div class=" w-10">
-                    <img id="message" onclick="showName(a)" class="w-10" src="images/message.svg" alt="">
+                    <img id="message" onclick="showName(&#34 ${post.title} &#34, '${post.view_count}')" class="w-10" src="images/message.svg" alt="">
               </div>
             </div>
             `
@@ -73,7 +73,7 @@ const displayInfo = (info) =>{
                         </div>
                     </div>
                   <div class=" w-10">
-                        <img id="message" onclick="showName(a)" class="w-10" src="images/message.svg" alt="">
+                        <img id="message" onclick="showName(&#34 ${post.title} &#34, '${post.view_count}')" class="w-10" src="images/message.svg" alt="">
                   </div>
                 </div>
                 `
@@ -83,9 +83,31 @@ const displayInfo = (info) =>{
      
   }
 
-//   mark as read section
 
+    //   mark as read section
+    const showName =(title,view) =>{
+    const markContainer =document.getElementById('mark-post');
+    const mark = document.createElement('div');
+         mark.classList = ''
+             mark.innerHTML = `
+        <div class="flex my-4 px-6 mx-auto rounded-xl pl-2 py-2 justify-between bg-white">
+                <div class=" my-3 text-left font-bold text-xl">${title}</div>
+                    <div class="flex items-center gap-2 pr-2">
+                    <img class="w-10" src="images/eye.svg" alt="">
+                    <span>${view}</span>
+                </div>
+         </div>
+        `
+  markContainer.appendChild(mark);
+  getCount();
+}
 
+let count = 0;
+const getCount = () => {
+  count++;
+  const readCount = document.getElementById('read-count');
+  readCount.innerText = count;
+}
 
 
 
