@@ -4,11 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Youth Forum</title>
+    <!-- daisy ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
+  <header>
     <!-- this is navbar -->
-    <section>
-        
+    <section class="container px-8 lg:px-24 py-10">
+      <div class="flex flex-col lg:flex-row justify-between gap-6">
+        <div>
+          <h1 class="text-6xl font-bold">Youth Forum</h1>
+        </div>
+        <div class=" flex gap-4 lg:gap-6">
+          <img title="Home" src="images/home.svg" alt="">
+          <img title="edit" src="images/edit.svg" alt="">
+          <img title="add" src="images/contact.svg" alt="">
+          <img title="flag" src="images/flag.svg" alt="">
+          <button class="btn btn-primary rounded-full px-10 ">Sign in</button>
+        </div>
+      </div>
     </section>
+    <!-- this is banner section -->
+    
+    <!-- banner section -->
+    <section class="container mx-auto lg:px-24 px-8 mt-12">
+      <div class="lg:h-96 bg-[url(images/bgbanner.png)] bg-no-repeat  bg-[#12132D] flex flex-col lg:flex-row  justify-between items-center bg-cover rounded-2xl p-8 lg:p-14 gap-6">
+        <div class="space-y-4 lg:space-y-10">
+          <h1 class="text-4xl lg:text-6xl font-extrabold text-white">Welcome to the <br> <span class="text-[#797DFC]">Youth</span> Forum</h1>
+          <p class="text-white"> The forum aims to bring together young people from across the world, enabling them to engage in discussions on development issues</p>
+          <div class="space-y-4">
+            <input type="text" placeholder="Search here anything " class="p-3 lg:p-6 w-96 rounded-full">
+            <button class="btn btn-primary lg:-translate-x-36 rounded-full w-96 lg:w-32 ">Search</button>
+          </div>
+        </div>
+        <div class=" rounded-2xl bg-white h-72 p-8 w-96 space-y-8">
+          <div class="flex justify-between items-center">
+            <p>Registered Users</p>
+            <p>01</p>
+          </div>
+          <div class="flex justify-between">
+            <p>Forum</p>
+            <p>01</p>
+          </div>
+          <div class="flex justify-between">
+            <p>Topics</p>
+            <p>01</p>
+          </div>
+          <div class="flex justify-between">
+            <p>Replies</p>
+            <p>01</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <!-- let's discuss section -->
+    <section class="container mx-auto lg:px-24 px-8 mt-16">
+      <h1 class="text-6xl font-bold text-center">Let’s Discuss</h1>
+      <p class="text-center p-6">Our Youth Forum Is Open To All Youth Of All Nations; Who Believe In <br> Their Power Of Making Changes.</p>
+
+      <!-- overall div for card info -->
+      <div class="flex justify-between gap-10">
+        <div id="discuss-container" class="w-full">
+          <div class="bg-orange-200  flex flex-col lg:flex-row justify-between  rounded-2xl ">
+            <div class="w-16 mx-auto m-6 lg:ml-6"> <img class="mx-auto" src="${card.image}" alt=""></div>
+            <div class="flex-1 p-10 space-y-4">
+                <h2 class="font-semibold"># ${card.category} &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<span>Authore: &nbsp ${card?.author?.name}</span></h2> 
+                <h1 class="text-xl font-bold">${card.title}</h1>
+                <p>${card.description}
+                </p>
+                <div class="divider"></div>
+
+      <!-- this is icon section -->
+            <div class="flex items-center gap-6">
+                <div class="flex-1 flex   border  ">
+                    <div class="flex flex-col lg:flex-row items-center lg:gap-4">
+                        <img class="w-10" src="images/message1.svg" alt="">
+                        <span class="lg:mr-8">${card.comment_count}</span>
+                    </div>
+                    <div class="flex flex-col lg:flex-row lg:gap-4 items-center">
+                        <img class="w-10" src="images/eye.svg" alt="">
+                        <span class="lg:mr-8">${card.view_count}</span>
+                    </div>
+                    <div class="flex flex-col lg:flex-row lg:gap-4 items-center">
+                        <img class="w-10" src="images/clock.png" alt="">
+                        <span class="lg:mr-8"> ${card.posted_time} min</span>
+                    </div>
+                </div>
+              <div class=" w-10">
+                    <img id="message" onclick="showName(a)" class="w-10" src="images/message.svg" alt="">
+              </div>
+            </div>
+            
+                
+            </div>
+        </div>
+
+<!-- asider section -->
+        </div>
+          <div class=" w-full lg:w-[65%] px-10 bg-[#797DFC1A] rounded-3xl">
+            <div>
+              <div class="flex items-center justify-between my-8 ">
+                <div class="font-mulish my-3 text-left font-bold text-xl">Title</div>
+
+              <div><img class="w-10" src="images/message1.svg" alt=""></i>
+                Mark as read: <span id="read-count"></span>
+              </div>
+            </div>
+            <hr class="border-2  w-full border-gray-600 my-3">
+
+            <div id="mark-post">
+
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+
+     <!-- join our forum section -->
+     <section class="container mx-auto lg:px-24 px-8 mt-16">
+      <div class="hero lg:h-96 bg-[#12132D] rounded-2xl">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img src="images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
+          <div class="text-center lg:text-left">
+            <h1 class="text-5xl text-white font-bold">Join Our Forum</h1>
+            <p class="py-6 text-white">Joining in The Our Youth Forum Initiatives your explaination what kind of support your organization <br> can provide and if you have a specific idea or project that your organization <br> would like to implement through the initiative</p>
+            <button class="btn btn-primary w-36 rounded-full">Registered Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- letest post section -->
+
+    <section class="container mx-auto lg:px-24 px-8 mt-10">
+      <h1 class="text-6xl font-bold text-center">Latest Posts</h1>
+      <p class="text-center p-6">On 25 April 2017, a group of young Bangladeshi presented an initiative at the National Youth Conference <br> in Dhaka to engage in dialogue with youth around the world.</p>
+
+
+      <div id="latest-post-container" class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <figure><img src="${post.cover_image}" alt="" /></figure>
+                <div class="card-body">
+                  <div class="flex gap-6">
+                    <img src="images/Frame.svg" alt="">
+                    <p>${post.author?.posted_date || 'No Publish Date'}</p>
+                  </div>
+                  <h1 class="font-semibold">${post.title}</h1>
+                  <p>${post.description}</p>
+
+                  <div class="flex gap-6">
+                    <img class="w-12 rounded-full" src="${post.profile_image}" alt="">
+                    <div>
+                        <h3>${post.author.name}</h3>
+
+                        <p>${post.author?.designation || 'Unknown'}</p>
+                    </div>
+                  </div>
+                </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer section -->
+  <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10">
+    <div>
+      <h1 class="text-6xl font-extrabold">Youth</h1>
+      <p>The OYF is an annual International forum that takes place in the City of Dhaka,Bangladesh</p>
+
+    </div>
+    <nav>
+      <div class="grid grid-flow-col gap-4">
+        <img src="images/logo-twitter 2.svg" alt="">
+        <img src="images/facebook (2).svg" alt="">
+        <img src="images/instagram.svg" alt="">
+        <img src="images/github.svg" alt="">
+
+      </div>
+
+    </nav>
+    <hr class="border-gray-500 border-[1px]  w-2/3 mx-auto border-dashed">
+    <aside>
+      <p class="">2024, All Rights Reserved.</p>
+    </aside>
+  </footer>
+
+  <script src="youth-forum.js"></script>
 </body>
 </html>
