@@ -25,16 +25,16 @@ const displayInfo = (info) =>{
 
       <!-- this is icon section -->
             <div class="flex items-center gap-6">
-                <div class="flex-1 flex   border">
-                    <div class="flex flex-col lg:flex-row items-center lg:gap-4">
+                <div class="flex-1 flex gap-6">
+                    <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
                         <img class="w-10" src="images/message1.svg" alt="">
                         <span class="lg:mr-8">${post.comment_count}</span>
                     </div>
-                    <div class="flex flex-col lg:flex-row lg:gap-4 items-center">
+                    <div class="flex flex-col lg:flex-row gap-2 lg:gap-4 items-center">
                         <img class="w-10" src="images/eye.svg" alt="">
                         <span class="lg:mr-8">${post.view_count}</span>
                     </div>
-                    <div class="flex flex-col lg:flex-row lg:gap-4 items-center">
+                    <div class="flex flex-col lg:flex-row gap-2 lg:gap-4 items-center">
                         <img class="w-10" src="images/clock.png" alt="">
                         <span class="lg:mr-8"> ${post.posted_time} min</span>
                     </div>
@@ -58,16 +58,16 @@ const displayInfo = (info) =>{
     
           <!-- this is icon section -->
                 <div class="flex items-center gap-6">
-                    <div class="flex-1 flex   border">
-                        <div class="flex flex-col lg:flex-row items-center lg:gap-4">
+                    <div class="flex-1 flex gap-6">
+                        <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
                             <img class="w-10" src="images/message1.svg" alt="">
                             <span class="lg:mr-8">${post.comment_count}</span>
                         </div>
-                        <div class="flex flex-col lg:flex-row lg:gap-4 items-center">
+                        <div class="flex flex-col lg:flex-row gap-2 lg:gap-4 items-center">
                             <img class="w-10" src="images/eye.svg" alt="">
                             <span class="lg:mr-8">${post.view_count}</span>
                         </div>
-                        <div class="flex flex-col lg:flex-row lg:gap-4 items-center">
+                        <div class="flex flex-col lg:flex-row gap-2 lg:gap-4 items-center">
                             <img class="w-10" src="images/clock.png" alt="">
                             <span class="lg:mr-8"> ${post.posted_time} min</span>
                         </div>
