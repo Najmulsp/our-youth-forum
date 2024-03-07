@@ -67,59 +67,31 @@
       <p class="text-center p-6">Our Youth Forum Is Open To All Youth Of All Nations; Who Believe In <br> Their Power Of Making Changes.</p>
 
       <!-- overall div for card info -->
-      <div class="flex justify-between gap-10">
-        <div id="discuss-container" class="w-full">
-          <div class="bg-orange-200  flex flex-col lg:flex-row justify-between  rounded-2xl ">
-            <div class="w-16 mx-auto m-6 lg:ml-6"> <img class="mx-auto" src="${card.image}" alt=""></div>
-            <div class="flex-1 p-10 space-y-4">
-                <h2 class="font-semibold"># ${card.category} &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<span>Authore: &nbsp ${card?.author?.name}</span></h2> 
-                <h1 class="text-xl font-bold">${card.title}</h1>
-                <p>${card.description}
-                </p>
-                <div class="divider"></div>
-
-      <!-- this is icon section -->
-            <div class="flex items-center gap-6">
-                <div class="flex-1 flex   border  ">
-                    <div class="flex flex-col lg:flex-row items-center lg:gap-4">
-                        <img class="w-10" src="images/message1.svg" alt="">
-                        <span class="lg:mr-8">${card.comment_count}</span>
-                    </div>
-                    <div class="flex flex-col lg:flex-row lg:gap-4 items-center">
-                        <img class="w-10" src="images/eye.svg" alt="">
-                        <span class="lg:mr-8">${card.view_count}</span>
-                    </div>
-                    <div class="flex flex-col lg:flex-row lg:gap-4 items-center">
-                        <img class="w-10" src="images/clock.png" alt="">
-                        <span class="lg:mr-8"> ${card.posted_time} min</span>
-                    </div>
-                </div>
-              <div class=" w-10">
-                    <img id="message" onclick="showName(a)" class="w-10" src="images/message.svg" alt="">
-              </div>
-            </div>
+      <div class="flex flex-col lg:flex-row justify-between gap-10">
+        <div id="discuss-container" class="">
+          
             
                 
             </div>
         </div>
+      </div>
 
 <!-- asider section -->
-        </div>
-          <div class=" w-full lg:w-[65%] px-10 bg-[#797DFC1A] rounded-3xl">
-            <div>
-              <div class="flex items-center justify-between my-8 ">
-                <div class="font-mulish my-3 text-left font-bold text-xl">Title</div>
+        <div class=" w-full lg:w-[65%] px-10 bg-[#797DFC1A] rounded-3xl">
+          <div>
+            <div class="flex items-center justify-between my-8 ">
+              <div class="font-mulish my-3 text-left font-bold text-xl">Title</div>
 
               <div><img class="w-10" src="images/message1.svg" alt=""></i>
                 Mark as read: <span id="read-count"></span>
-              </div>
-            </div>
-            <hr class="border-2  w-full border-gray-600 my-3">
-
-            <div id="mark-post">
-
             </div>
           </div>
+          <hr class="border-2  w-full border-gray-600 my-3">
+
+          <div id="mark-post">
+
+          </div>
+           </div>
         </div>
     </div>
     </section>
@@ -129,7 +101,7 @@
       <div class="hero lg:h-96 bg-[#12132D] rounded-2xl">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img src="images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
-          <div class="text-center lg:text-left">
+          <div class="text-center lg:text-left p-6">
             <h1 class="text-5xl text-white font-bold">Join Our Forum</h1>
             <p class="py-6 text-white">Joining in The Our Youth Forum Initiatives your explaination what kind of support your organization <br> can provide and if you have a specific idea or project that your organization <br> would like to implement through the initiative</p>
             <button class="btn btn-primary w-36 rounded-full">Registered Now</button>
@@ -140,35 +112,18 @@
 
     <!-- letest post section -->
 
-    <section class="container mx-auto lg:px-24 px-8 mt-10">
+    <section class="container mx-auto lg:px-24 px-8 mt-16">
       <h1 class="text-6xl font-bold text-center">Latest Posts</h1>
       <p class="text-center p-6">On 25 April 2017, a group of young Bangladeshi presented an initiative at the National Youth Conference <br> in Dhaka to engage in dialogue with youth around the world.</p>
 
 
       <div id="latest-post-container" class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-        <figure><img src="${post.cover_image}" alt="" /></figure>
-                <div class="card-body">
-                  <div class="flex gap-6">
-                    <img src="images/Frame.svg" alt="">
-                    <p>${post.author?.posted_date || 'No Publish Date'}</p>
-                  </div>
-                  <h1 class="font-semibold">${post.title}</h1>
-                  <p>${post.description}</p>
-
-                  <div class="flex gap-6">
-                    <img class="w-12 rounded-full" src="${post.profile_image}" alt="">
-                    <div>
-                        <h3>${post.author.name}</h3>
-
-                        <p>${post.author?.designation || 'Unknown'}</p>
-                    </div>
-                  </div>
-                </div>
+        
       </div>
     </section>
   </main>
   <!-- footer section -->
-  <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10">
+  <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-16">
     <div>
       <h1 class="text-6xl font-extrabold">Youth</h1>
       <p>The OYF is an annual International forum that takes place in the City of Dhaka,Bangladesh</p>
